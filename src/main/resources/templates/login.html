@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"></link>
+</head>
+<body onload="document.f.username.focus();">
+    <div id="loginForm">
+        <h3>Login With Username and Password</h3>
+        <div class="error" th:if="${param.error}">
+            Incorrect username or passworkd. Try again.
+        </div>
+
+        <form name="f" th:action="@{/login}" method="POST">
+
+        </form>
+    </div>
+</body>
+</html>
